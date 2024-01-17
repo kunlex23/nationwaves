@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   sip_ua: ^0.5.8
   flutter_webrtc: ^0.9.34
+  permission_handler: ^11.1.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
