@@ -35,7 +35,7 @@ class _MyDialPadWidget extends State<DialPadWidget>
 
   void _loadSettings() async {
     _preferences = await SharedPreferences.getInstance();
-    _dest = _preferences.getString('dest') ?? 'sip:hello_jssip@tryit.jssip.net';
+    _dest = _preferences.getString('dest') ?? '';
     _textController = TextEditingController(text: _dest);
     _textController!.text = _dest!;
 
@@ -169,16 +169,16 @@ class _MyDialPadWidget extends State<DialPadWidget>
     return [
       Align(
         alignment: AlignmentDirectional.centerStart,
-        child: Text('Destination URL'),
+        child: Text(''),
       ),
-      const SizedBox(height: 8),
+      const SizedBox(height: 2),
       Container(
         width: 500,
         child: TextField(
-          keyboardType: TextInputType.text,
+          // keyboardType: TextInputType.text,
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 18, color: Colors.black54),
-          maxLines: 3,
+          maxLines: 1,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
           ),
