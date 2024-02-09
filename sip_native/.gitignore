@@ -1,0 +1,10 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+build/
+.idea/
+.idea/workspace.xml
+sip_native.iml
