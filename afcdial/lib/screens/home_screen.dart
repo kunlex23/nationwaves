@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bottom Navigation Demo'),
+        title: Text(''),
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -33,24 +33,33 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
+            icon: Icon(Icons.call,
+                color: _currentIndex == 0 ? Colors.green : Colors.black),
             label: 'Calls',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
+            icon: Icon(Icons.message,
+                color: _currentIndex == 1 ? Colors.green : Colors.black),
             label: 'Messages',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.contacts),
+            icon: Icon(Icons.contacts,
+                color: _currentIndex == 2 ? Colors.green : Colors.black),
             label: 'Contacts',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.settings,
+                color: _currentIndex == 3 ? Colors.green : Colors.black),
             label: 'Settings',
           ),
         ],
+        // Customizing label style
+        selectedLabelStyle: TextStyle(color: Colors.green),
+        unselectedLabelStyle: TextStyle(color: Colors.black),
       ),
     );
   }
